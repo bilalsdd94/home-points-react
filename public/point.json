@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "name": "Water gun",
+    "description": "consumes 300ml water",
+    "points": "5 ",
+    "price": "$15",
+    "image_url": "https://i.stack.imgur.com/FImru.png?s=128&g=1",
+    "source_url": "https://www.daraz.pk/power-water-gun-i1513769-s9326174.html"
+    
+  },
+
+  {
+    "id": 2,
+    "name": "Swimming play googles",
+    "description": "Clear-view polycarbonate lenses",
+    "points": "10 ",
+    "price": "$20",
+    "image_url": "image url",
+    "source_url": "url"
+    
+  }
+  
+]

@@ -1,0 +1,12 @@
+.Div{
+    border: 1px dashed black;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 50px;
+    
+}
+
+.Div p{
+    font-family: italic;
+}
+
