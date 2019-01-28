@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-#NOTE: This is my first Learning Project as a React developer.
+#NOTE: This project is under development. 
 
 1-First you need to create folder
 
