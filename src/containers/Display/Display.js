@@ -1,16 +1,15 @@
 import React,{Component} from 'react';
 import axios from 'axios';
 import Box from '../../components/Box/Box.js';
-import {Link} from 'react-router-dom';
 
-class Display extends Component {
+
+class Display extends Component {    
+
     state = {
         posts:[],
         totalPoints: 0,
-        selectedId: null,
-      
-     };
-    
+        isClicked: false,
+    };
 
      componentDidMount()
      {
@@ -20,12 +19,19 @@ class Display extends Component {
                 this.setState({posts: response.data});
              });    
          //ajax calls here 
-     }
      
-    selectedHandler=(points) =>   //id of handler which was selected
+    }
+     
+    selectedHandler=(points,e) =>   //id of handler which was selected
     {
-        
-       const total = this.state.totalPoints + points;
+        let total = 0;
+        // 
+        if(e.target.checked)
+        {   
+            total = this.state.totalPoints + parseInt(points);
+        }  
+        else
+             total = this.state.totalPoints - parseInt(points);
        this.setState({totalPoints:total});
        
     }
@@ -45,7 +51,7 @@ class Display extends Component {
                     price={post.price}
                     image_url={post.image_url}
                     source_url={post.source_url}
-                    clicked={()=> this.selectedHandler(post.points)}
+                    clicked={(e)=> this.selectedHandler(post.points,e)}
                     />                    
                 // </Link>
 
@@ -66,5 +72,19 @@ class Display extends Component {
     }
 
 };
+
+// const mapStateToProps = state => {
+//     return{
+//         p_one: state.p1   //change..  this.props.p_one
+//     }; 
+// }
+
+// const mapDispatchToProps = dispatch =>
+// {
+//     return {
+//         onP1Added: (p1p)=> dispatch({type: actionTypes.SELECTED_HANDLER,p1points:p1p}),
+//         onP1Removed: (p1p)=> dispatch({type: actionTypes.DELETED_HANDLER,p1points:p1p})
+//     };
+// }
 
 export default Display;

@@ -4,9 +4,9 @@ import Checkbox from '../Checkbox/Checkbox.js';
 const box = (props) =>
 (
     
-        <div className= {classes.Div} onClick={props.clicked}>
+        <div className= {classes.Div} >
             
-            <Checkbox ticked={props.clicked}/>
+            <Checkbox clicked={props.clicked}/>
             
             <p> <strong>Product Name:{props.name}</strong></p>
             <p> Description: {props.description}</p>

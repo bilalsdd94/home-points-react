@@ -5,7 +5,7 @@ const checkbox = (props) =>
 
     <form>
     <input type="checkbox"
-      defaultChecked={props.ticked}/>
+      defaultChecked={props.ticked} onClick={props.clicked} />
     </form>
 );
 
